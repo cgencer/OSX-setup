@@ -1,0 +1,74 @@
+
+
+## PROTECT FILES
+#<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+#   Order Allow,Deny
+#   Deny from all
+#</FilesMatch>
+
+# Remove IE image toolbar
+#<FilesMatch "\.(html|htm|php)$">
+#   Header set imagetoolbar "no"
+#</FilesMatch>
+
+# cache for 1 month and enable access always
+#<FilesMatch "\.(flv|gif|jpg|jpeg|png|ico|swf)$">
+#   Header set Cache-Control "max-age=2592000"
+#   Allow from all
+#</FilesMatch>
+
+# ErrorDocument 400 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 401 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 403 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 404 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 405 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 406 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 409 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 413 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 414 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 500 http://www.artchive.org.tr/pages/page/1464_page_not_found
+# ErrorDocument 501 http://www.artchive.org.tr/pages/page/1464_page_not_found
+
+# Prevent Files image/file hotlinking
+# RewriteCond %{HTTP_REFERER} !^$
+# RewriteCond %{HTTP_REFERER} !^http://(www|tr|en\.)?artchive.org.tr/.*$ [NC]
+# RewriteRule \.(gif|jpg|swf|flv|png)$ http://www.artchive.org.tr/feed.gif [R=302,L]
+
+# STOP LOOP CODE
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule ^.*$ - [L]
+
+# Rewrite the feeds to feedburner
+#RewriteRule ^(atom|rss)/?(.*)$ http://feeds.feedburner.com/artchive [R=301,L]
+Options +FollowSymLinks
+
+# prevention of HTTP response splitting, cross-site scripting attacks
+# cache poisoning, and similar dual-header exploits
+RewriteCond %{THE_REQUEST} ^.*(\\r|\\n|%0A|%0D).* [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+# Cookie-attacks: opening and closing angle brackets,
+# single quotation marks, and a variety of hexadecimal equivalents
+RewriteCond %{HTTP_COOKIE} ^.*(<|>|'|%0A|%0D|%27|%3C|%3E|%00).* [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+# any URL requests containing invalid characters, including different
+# types of brackets, various punctuational characters,
+# and some key hexadecimal equivalents
+RewriteCond %{REQUEST_URI} ^.*(,|;|:|<|>|">|"<|/|\\\.\.\\).* [NC,OR]
+RewriteCond %{REQUEST_URI} ^.*(\=|\@|\[|\]|\^|\`|\{|\}|\~).* [NC,OR]
+RewriteCond %{REQUEST_URI} ^.*(\'|%0A|%0D|%27|%3C|%3E|%00).* [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+# User-agents who do server attacks and other malicious behavior
+RewriteCond %{HTTP_USER_AGENT} ^$                                                              [OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*(<|>|'|%0A|%0D|%27|%3C|%3E|%00).*                            [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*(HTTrack|clshttp|archiver|loader|email|nikto|miner|python).* [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*(winhttp|libwww\-perl|curl|wget|harvest|scan|grab|extract).* [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+# Malicious requests
+RewriteCond %{QUERY_STRING} ^.*(localhost|loopback|127\.0\.0\.1).*                                [NC,OR]
+RewriteCond %{QUERY_STRING} ^.*(\.|\*|;|<|>|'|"|\)|%0A|%0D|%22|%27|%3C|%3E|%00).*                 [NC,OR]
+RewriteCond %{QUERY_STRING} ^.*(md5|benchmark|union|select|insert|cast|set|declare|drop|update).* [NC]
+RewriteRule ^(.*)$ - [F,L]
