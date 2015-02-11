@@ -102,12 +102,21 @@ alias nginx.start='sudo nginx'
 alias nginx.stop='sudo nginx -s stop'
 alias nginx.restart='sudo nginx -s reload'
 
+alias s.ed="lime ~/.profile"
+alias s.cmp="source ~/.profile"
+
 alias mongo.start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
 alias mongo.stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
 
 alias focus.cd='cd ~/work/prod/js/Bilgera/focus.webapp'
 alias focus.compile='focus.cd; grunt compileToJst'
 alias focus.cmp='focus.cd; grunt compileToJst'
+
+alias cetinler.cd='cd "/Users/D4D3/Work/prod/phoneGap/cetinler/Çetinler Arçelik"'
+alias cetinler.ios='cordova build ios'
+alias cetinler.and='cordova build ios'
+
+alias launched='launchctl list |grep homebrew; echo REMOVE WITH: launchctl remove ...;'
 
 alias dirspaces="sudo du -xhd 1"
 alias myssh="pbcopy < ~/.ssh/id_rsa.pub | pbpaste > ~/clipboard.text"
@@ -174,13 +183,17 @@ function deB() {
 }
 
 export ANDROID_SDK_PATH=~/Documents/android-sdk-macosx
-export NODE_PATH=/usr/local/lib/node
-export NODE_MPATH=~/.node/lib/node_modules/
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export NODE_PATH=/usr/local/lib/node:$NPM_PACKAGES/lib/node_modules
+export NODE_PATH=$NODE_PATH:/Users/d4d3/.node/lib/node_modules
+export NODE_PATH=$NODE_PATH:/Users/d4d3/.npm-packages/lib/node_modules
+
+export NODE_MPATH=${HOME}/.node/lib/node_modules/
 export NODE_ENV="development"
 export MANPATH=$MANPATH:/opt/local/share/man
-export LD_LIBRARY_PATH=~/Documents/android-sdk-macosx/tools/lib/
+export LD_LIBRARY_PATH=${HOME}/Documents/android-sdk-macosx/tools/lib/
 
-export PATH=$PATH:~/Applications
+export PATH=$PATH:${HOME}/Applications
 export PATH=/usr/local:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/Developer/usr/bin/git
 export PATH=$PATH:/usr/local/mysql/bin
@@ -190,9 +203,6 @@ export PATH=$PATH:/usr/local/php5/bin
 export PATH=$PATH:/usr/local/lib/node_modules/npm
 export PATH=$PATH:NODE_PATH
 export PATH=$PATH:$NODE_MPATH
-export PATH=$PATH:$NODE_MPATH/plugman/
-export PATH=$PATH:$NODE_MPATH/bower/bin/
-export PATH=$PATH:$NODE_MPATH/grunt-cli/bin/
-export PATH=$PATH:$NODE_MPATH/cordova/bin/
+export PATH=$PATH:${HOME}/.node/bin
 export PATH=$PATH:/usr/local/Library/Formula/
 export PATH=$PATH:$ANDROID_SDK_PATH/tools/:$ANDROID_SDK_PATH/platforn-tools/

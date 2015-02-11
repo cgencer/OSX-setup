@@ -1,0 +1,165 @@
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+# http://www.robotstxt.org/wc/robots.html
+#
+# For syntax checking, see:
+# http://www.sxw.org.uk/computing/robots/check.html
+
+User-agent: *
+Crawl-delay: 10
+# Directories
+Disallow: /includes/
+Disallow: /misc/
+Disallow: /modules/
+Disallow: /profiles/
+Disallow: /scripts/
+Disallow: /themes/
+# Files
+Disallow: /CHANGELOG.txt
+Disallow: /cron.php
+Disallow: /INSTALL.mysql.txt
+Disallow: /INSTALL.pgsql.txt
+Disallow: /install.php
+Disallow: /INSTALL.txt
+Disallow: /LICENSE.txt
+Disallow: /MAINTAINERS.txt
+Disallow: /update.php
+Disallow: /UPGRADE.txt
+Disallow: /xmlrpc.php
+# Paths (clean URLs)
+Disallow: /admin/
+Disallow: /comment/reply/
+Disallow: /filter/tips/
+Disallow: /logout/
+Disallow: /node/add/
+Disallow: /search/
+Disallow: /user/register/
+Disallow: /user/password/
+Disallow: /user/login/
+# Paths (no clean URLs)
+Disallow: /?q=admin/
+Disallow: /?q=comment/reply/
+Disallow: /?q=filter/tips/
+Disallow: /?q=logout/
+Disallow: /?q=node/add/
+Disallow: /?q=search/
+Disallow: /?q=user/password/
+Disallow: /?q=user/register/
+Disallow: /?q=user/login/
+
+#Google Search Engine Robot
+User-agent: Googlebot
+Allow: /?_escaped_fragment_
+
+Allow: /?lang=
+Allow: /hashtag/*?src=
+Allow: /search?q=%23
+Disallow: /search/realtime
+Disallow: /search/users
+Disallow: /search/*/grid
+
+Disallow: /*?
+Disallow: /*/followers
+Disallow: /*/following
+
+Disallow: /account/not_my_account
+
+#Yahoo! Search Engine Robot
+User-Agent: Slurp
+Allow: /?_escaped_fragment_
+
+Allow: /?lang=
+Allow: /hashtag/*?src=
+Allow: /search?q=%23
+Disallow: /search/realtime
+Disallow: /search/users
+Disallow: /search/*/grid
+
+Disallow: /*?
+Disallow: /*/followers
+Disallow: /*/following
+
+Disallow: /account/not_my_account
+
+#Yandex Search Engine Robot
+User-agent: Yandex
+Allow: /?_escaped_fragment_
+
+Allow: /?lang=
+Allow: /hashtag/*?src=
+Allow: /search?q=%23
+Disallow: /search/realtime
+Disallow: /search/users
+Disallow: /search/*/grid
+
+Disallow: /*?
+Disallow: /*/followers
+Disallow: /*/following
+
+Disallow: /account/not_my_account
+
+#Microsoft Search Engine Robot
+User-Agent: msnbot
+Allow: /?_escaped_fragment_
+
+Allow: /?lang=
+Allow: /hashtag/*?src=
+Allow: /search?q=%23
+Disallow: /search/realtime
+Disallow: /search/users
+Disallow: /search/*/grid
+
+Disallow: /*?
+Disallow: /*/followers
+Disallow: /*/following
+
+Disallow: /account/not_my_account
+
+# Every bot that might possibly read and respect this file.
+User-agent: *
+Allow: /?lang=
+Allow: /hashtag/*?src=
+Allow: /search?q=%23
+Disallow: /search/realtime
+Disallow: /search/users
+Disallow: /search/*/grid
+
+Disallow: /*?
+Disallow: /*/followers
+Disallow: /*/following
+
+Disallow: /account/not_my_account
+
+Disallow: /oauth
+Disallow: /1/oauth
+
+Disallow: /i/streams
+
+# Wait 1 second between successive requests. See ONBOARD-2698 for details.
+Crawl-delay: 1
+
+# Wordpress
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+Disallow: /blackhole/
+Disallow: /mint/
+Disallow: /feed/
+Allow: /tag/mint/
+Allow: /tag/feed/
+
+# Independent of user agent. Links in the sitemap are full URLs using https:// and need to match
+# the protocol of the sitemap.
+Sitemap: https://this.com/sitemap.xml
