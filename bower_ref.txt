@@ -1,0 +1,67 @@
+
+bower:		jquery-panelslider 
+info:		Tam sayfa sol/sağ panel
+github:		github.com/eduardomb/jquery-panelslider.git
+demo:		http://eduardomb.github.io/jquery-panelslider/
+tags:		fullpage, panel
+
+bower:		ItemSlider
+info:		ürün slider'ı
+github:		github.com/codrops/ItemSlider.git
+demo:		http://tympanus.net/Tutorials/ItemSlider/
+tags:		ecommerce, products, 
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
+bower:		
+info:		
+github:		
+demo:		
+tags:		
+
