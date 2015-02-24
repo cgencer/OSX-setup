@@ -48,6 +48,7 @@ fi
 
 # Try to keep environment pollution down
 unset use_color
+git config --global color.ui auto
 
 # improve bash history
 shopt -s histappend
@@ -101,9 +102,11 @@ alias nginx.sites="sudo lime /usr/local/etc/nginx/sites-enabled/"
 alias nginx.start='sudo nginx'
 alias nginx.stop='sudo nginx -s stop'
 alias nginx.restart='sudo nginx -s reload'
+alias nginx.unload='sudo launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 
 alias s.ed="lime ~/.profile"
 alias s.cmp="source ~/.profile"
+alias s.push='cp ~/.profile /Users/D4D3/Work/OSX-setup; cd '
 
 alias mongo.start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
 alias mongo.stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
@@ -112,9 +115,16 @@ alias focus.cd='cd ~/work/prod/js/Bilgera/focus.webapp'
 alias focus.compile='focus.cd; grunt compileToJst'
 alias focus.cmp='focus.cd; grunt compileToJst'
 
-alias cetinler.cd='cd "/Users/D4D3/Work/prod/phoneGap/cetinler/Çetinler Arçelik"'
+alias xcetinler.cd='cd "/Users/D4D3/Work/prod/phoneGap/cetinler/Çetinler Arçelik"'
+alias xcetinler.ios='cordova build ios'
+alias xcetinler.and='cordova build ios'
+
+alias cetinler.cd='cd /Users/D4D3/Work/prod/phoneGap/freenet'
 alias cetinler.ios='cordova build ios'
 alias cetinler.and='cordova build ios'
+
+alias gap.prep='nginx.unload; weinre &'
+alias gap.debug='open -a "Google Chrome" "http://localhost:8080/client/#anonymous" --args --disable-web-security'
 
 alias launched='launchctl list |grep homebrew; echo REMOVE WITH: launchctl remove ...;'
 
@@ -185,24 +195,26 @@ function deB() {
 export ANDROID_SDK_PATH=~/Documents/android-sdk-macosx
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export NODE_PATH=/usr/local/lib/node:$NPM_PACKAGES/lib/node_modules
-export NODE_PATH=$NODE_PATH:/Users/d4d3/.node/lib/node_modules
-export NODE_PATH=$NODE_PATH:/Users/d4d3/.npm-packages/lib/node_modules
+export NODE_PATH=${NODE_PATH}:/Users/d4d3/.node/lib/node_modules
+export NODE_PATH=${NODE_PATH}:/Users/d4d3/.npm-packages/lib/node_modules
 
 export NODE_MPATH=${HOME}/.node/lib/node_modules/
 export NODE_ENV="development"
-export MANPATH=$MANPATH:/opt/local/share/man
+export MANPATH=${MANPATH}:/opt/local/share/man
 export LD_LIBRARY_PATH=${HOME}/Documents/android-sdk-macosx/tools/lib/
 
-export PATH=$PATH:${HOME}/Applications
 export PATH=/usr/local:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$PATH:${HOME}/Applications
 export PATH=$PATH:/Developer/usr/bin/git
 export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:${NPM_PACKAGES}/bin
 export PATH=$PATH:/usr/local/mongodb/bin
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:/usr/local/php5/bin
 export PATH=$PATH:/usr/local/lib/node_modules/npm
-export PATH=$PATH:NODE_PATH
-export PATH=$PATH:$NODE_MPATH
+export PATH=$PATH:/Work/base/js/jsl-0.3.0-mac
+export PATH=$PATH:${NODE_PATH}
+export PATH=$PATH:${NODE_MPATH}
 export PATH=$PATH:${HOME}/.node/bin
 export PATH=$PATH:/usr/local/Library/Formula/
-export PATH=$PATH:$ANDROID_SDK_PATH/tools/:$ANDROID_SDK_PATH/platforn-tools/
+export PATH=$PATH:${ANDROID_SDK_PATH}/tools/:$ANDROID_SDK_PATH/platform-tools/
