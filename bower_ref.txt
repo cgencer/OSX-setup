@@ -29,39 +29,39 @@ github:		github.com/markywilson/FlexSlider-RTL.git
 demo:		http://flexslider.woothemes.com
 tags:		horiz, vert, touch, thumbnail, video
 
+bower:		hexaflip
+info:		flipping cubes
+github:		github.com/dmotz/hexaflip
+demo:		http://oxism.com/hexaflip/
+tags:		pseudo3d, css3
+
+bower:		jquery.flip
+info:		psuedo flipping cards, IE6+
+github:		github.com/roncioso/Flip-jQuery.git
+demo:		http://lab.smashup.it/flip/
+tags:		pseudo, compatible, 
+
 bower:		
-info:		
+info:		http://jonraasch.com/blog/quickflip-2-jquery-plugin
 github:		
 demo:		
 tags:		
 
-bower:		
-info:		
-github:		
+bower:		flipboard-layout
+info:		IOS-flipboard app like magazine style
+github:		github.com/botelho/flipboard-layout
+demo:		
+tags:		css3
+
+bower:		flip
+info:		http://nnattawat.github.io/flip/
+github:		github.com/nnattawat/flip
 demo:		
 tags:		
 
-bower:		
-info:		
-github:		
-demo:		
-tags:		
-
-bower:		
-info:		
-github:		
-demo:		
-tags:		
-
-bower:		
-info:		
-github:		
-demo:		
-tags:		
-
-bower:		
-info:		
-github:		
-demo:		
-tags:		
+bower:		jquery-flipper
+info:		flipping cards
+github:		github.com/cameronjroe/jquery-flipper
+demo:		http://cameronjroe.github.io/jquery-flipper
+tags:		css3
 
