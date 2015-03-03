@@ -1,0 +1,30 @@
+
+bower:		jquery-panelslider 
+info:		Tam sayfa sol/sağ panel
+github:		github.com/eduardomb/jquery-panelslider.git
+demo:		http://eduardomb.github.io/jquery-panelslider/
+tags:		fullpage, panel
+
+bower:		ItemSlider
+info:		ürün slider'ı
+github:		github.com/codrops/ItemSlider.git
+demo:		http://tympanus.net/Tutorials/ItemSlider/
+tags:		ecommerce, products, 
+
+bower:		bxslider-4
+info:		slider
+github:		github.com/wandoledzep/bxslider-4.git
+demo:		http://bxslider.com/examples/auto-show-start-stop-controls
+tags:		image, slider, jquery, responsive
+
+bower:		lean-slider
+info:		imageslider
+github:		github.com/gilbitron/Lean-Slider.git
+demo:		http://dev7studios.com/lean-slider/
+tags:		image, slider, jquery
+
+bower:		flexslider-rtl
+info:		woothemes slider
+github:		github.com/markywilson/FlexSlider-RTL.git
+demo:		http://flexslider.woothemes.com
+tags:		horiz, vert, touch, thumbnail, video
