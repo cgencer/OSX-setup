@@ -1,0 +1,6 @@
+name:		ClearCode ShortCut Library 
+info:		template komutları
+page:		https://wordpress.org/plugins/cngann-shortcodes/
+demo:		
+tags:		shortcodes
+
