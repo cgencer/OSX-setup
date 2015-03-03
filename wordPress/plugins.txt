@@ -4,3 +4,9 @@ page:		https://wordpress.org/plugins/cngann-shortcodes/
 demo:		
 tags:		shortcodes
 
+name:		Rotating CSS Card 
+info:		
+page:		https://wordpress.org/plugins/creative-tim-rotating-css-cards/
+demo:		http://www.creative-tim.com/product/rotating-css-card
+tags:		kartvizit
+
