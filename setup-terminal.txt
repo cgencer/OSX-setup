@@ -1,0 +1,2 @@
+sudo npm install grunt bower wiredep --save-dev
+sudo npm install grunt-contrib-concat grunt-contrib-less grunt-contrib-uglify grunt-contrib-watch grunt-notify grunt-wiredep --save-dev
