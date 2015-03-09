@@ -104,9 +104,14 @@ alias nginx.stop='sudo nginx -s stop'
 alias nginx.restart='sudo nginx -s reload'
 alias nginx.unload='sudo launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 
-alias s.ed="lime ~/.profile"
+alias s.ed="lime ~/.kuzguni/.profile"
+alias s.cp='cp -Rf .kuzguni/.profile ~/.profile'
 alias s.cmp="source ~/.profile"
-alias s.push='cp ~/.profile /Users/D4D3/Work/OSX-setup; cd '
+alias s.push='cp -Rf ~/.profile ~/worx/OSX-setup/.kuzguni/.profile;'
+
+alias wp.grab='cd /tmp; curl -O https://wordpress.org/latest.zip; unzip -q latest.zip; echo move to where?; read WHERE;'
+alias wp.help='echo wp.genesis ... info on WP-Genesis framework snippets'
+alias wp.genesis='open http://justintallant.com/genesis-sublime-text-2-snippets/'
 
 alias mongo.start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
 alias mongo.stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
@@ -115,13 +120,7 @@ alias focus.cd='cd ~/work/prod/js/Bilgera/focus.webapp'
 alias focus.compile='focus.cd; grunt compileToJst'
 alias focus.cmp='focus.cd; grunt compileToJst'
 
-alias xcetinler.cd='cd "/Users/D4D3/Work/prod/phoneGap/cetinler/Çetinler Arçelik"'
-alias xcetinler.ios='cordova build ios'
-alias xcetinler.and='cordova build ios'
 
-alias cetinler.cd='cd /Users/D4D3/Work/prod/phoneGap/freenet'
-alias cetinler.ios='cordova build ios'
-alias cetinler.and='cordova build ios'
 
 alias gap.prep='nginx.unload; weinre &'
 alias gap.debug='open -a "Google Chrome" "http://localhost:8080/client/#anonymous" --args --disable-web-security'

@@ -1,2 +1,8 @@
 sudo npm install grunt bower wiredep --save-dev
-sudo npm install grunt-contrib-concat grunt-contrib-less grunt-contrib-uglify grunt-contrib-watch grunt-notify grunt-wiredep --save-dev
+sudo npm install grunt-contrib-concat grunt-contrib-less grunt-contrib-uglify grunt-contrib-watch grunt-contrib-copy grunt-contrib-jshint grunt-contrib-sass grunt-notify grunt-wiredep grunt-wp-i18n grunt-curl --save-dev
+
+
+# jsfmt for Sublime Text 2/3
+# https://github.com/Automattic/sublime-jsfmt
+cd ~/Library/"Application Support/Sublime Text 3"/Packages
+git clone https://github.com/Automattic/sublime-jsfmt jsfmt

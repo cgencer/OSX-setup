@@ -10,3 +10,15 @@ page:		https://wordpress.org/plugins/creative-tim-rotating-css-cards/
 demo:		http://www.creative-tim.com/product/rotating-css-card
 tags:		kartvizit
 
+name:		JSON API for WP-API 
+info:		JSON API allows you to retrieve and manipulate WordPress content using HTTP requests. 
+page:		https://wordpress.org/plugins/json-api/
+demo:		
+tags:		JSON API
+notes:		https://gist.github.com/atwellpub/8778976
+
+name:		Babble
+info:		Multilingual WordPress 
+page:		https://github.com/Automattic/babble
+demo:		
+tags:		translations, translation, multilingual, i18n, l10n, localisation
