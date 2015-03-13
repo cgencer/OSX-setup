@@ -1,0 +1,6 @@
+name:		Cascading Dropdown Lists 
+info:		full-featured MySQL management tool 
+page:		http://www.jqueryscript.net/demo/Dynamic-jQuery-Cascading-Dropdown-Lists-Plugin/
+demo:		ditto
+tags:		relational, cascading, drilldown, menu, nested data
+

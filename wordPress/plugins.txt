@@ -22,3 +22,21 @@ info:		Multilingual WordPress
 page:		https://github.com/Automattic/babble
 demo:		
 tags:		translations, translation, multilingual, i18n, l10n, localisation
+
+name:		PageBuilder
+info:		widgetized page builder 
+page:		https://siteorigin.com/page-builder/
+demo:		
+tags:		
+
+name:		MySQL management tool 
+info:		full-featured MySQL management tool 
+page:		https://wordpress.org/plugins/adminer/
+demo:		
+tags:		
+
+name:		jQuery drillDown
+info:		ios style drilldown
+page:		http://www.designchemical.com/blog/index.php/wordpress-plugins/wordpress-plugin-jquery-drill-down-ipod-menu-widget/
+demo:		http://www.designchemical.com/lab/demo-wordpress-jquery-drill-down-ipod-menu-plugin/
+tags:		
