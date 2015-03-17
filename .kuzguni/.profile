@@ -91,6 +91,22 @@ alias ports.tcp='sudo lsof -nP | grep TCP'
 alias ports.udp='sudo lsof -nP | grep UDP'
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
+alias s.ed="lime ~/.kuzguni/.profile"
+alias s.cp='cp -Rf .kuzguni/.profile ~/.profile'
+alias s.cmp="source ~/.profile"
+alias s.push='cp -Rf ~/.profile ~/worx/OSX-setup/.kuzguni/.profile;'
+
+alias wp.grab='cd /tmp; curl -O https://wordpress.org/latest.zip; unzip -q latest.zip; echo move to where?; read WHERE;'
+alias wp.help='echo wp.genesis ... info on WP-Genesis framework snippets'
+alias wp.genesis='open http://justintallant.com/genesis-sublime-text-2-snippets/'
+
+##########################
+#   server-based stuff   #
+##########################
+
+alias mongo.start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
+alias mongo.stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
+
 alias apache.cd="cd /private/etc/apache2/"
 alias apache.conf="sudo lime /private/etc/apache2/httpd.conf"
 alias apache.sites="sudo lime /private/etc/apache2/vhosts/"
@@ -104,22 +120,21 @@ alias nginx.stop='sudo nginx -s stop'
 alias nginx.restart='sudo nginx -s reload'
 alias nginx.unload='sudo launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
 
-alias s.ed="lime ~/.kuzguni/.profile"
-alias s.cp='cp -Rf .kuzguni/.profile ~/.profile'
-alias s.cmp="source ~/.profile"
-alias s.push='cp -Rf ~/.profile ~/worx/OSX-setup/.kuzguni/.profile;'
-
-alias wp.grab='cd /tmp; curl -O https://wordpress.org/latest.zip; unzip -q latest.zip; echo move to where?; read WHERE;'
-alias wp.help='echo wp.genesis ... info on WP-Genesis framework snippets'
-alias wp.genesis='open http://justintallant.com/genesis-sublime-text-2-snippets/'
-
-alias mongo.start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
-alias mongo.stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
+##########################
+#   client-based stuff   #
+##########################
 
 alias focus.cd='cd ~/work/prod/js/Bilgera/focus.webapp'
 alias focus.compile='focus.cd; grunt compileToJst'
 alias focus.cmp='focus.cd; grunt compileToJst'
 
+##########################
+#   git for many remotes #
+##########################
+git-pullall () { for RMT in $(git remote); do git pull -v $RMT $1; done; }    
+alias git-pullall=git-pullall
+git-pushall () { for RMT in $(git remote); do git push -v $RMT $1; done; }
+alias git-pushall=git-pushall
 
 
 alias gap.prep='nginx.unload; weinre &'
