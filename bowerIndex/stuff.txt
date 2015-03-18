@@ -1,0 +1,17 @@
+Tabs: http://tympanus.net/Development/TabStylesInspiration/
+Grid layout: http://tympanus.net/Tutorials/SamsungGrid/index.html
+Hover for photos: http://tympanus.net/Development/HoverEffectIdeas/
+Search: http://tympanus.net/Development/MorphingSearch/
+Sliders: http://tympanus.net/Development/ItemTransitions/index2.html
+
+Cool:
+- Photo Stack: http://tympanus.net/Development/StackEffects/
+- Article: http://tympanus.net/Development/ArticleIntroEffects/index2.html
+- Notifications: http://tympanus.net/Development/NotificationStyles/
+- Off canvas: http://tympanus.net/Development/OffCanvasMenuEffects/
+- page preloading: http://tympanus.net/Tutorials/PagePreloadingEffect/
+- tooptip: http://tympanus.net/Development/TooltipStylesInspiration/index.html
+- Dialogs: http://tympanus.net/Development/DialogEffects/ken.html
+
+Can be used for single page
+http://tympanus.net/Development/PageLoadingEffects/index.html

@@ -137,8 +137,13 @@ git-pushall () { for RMT in $(git remote); do git push -v $RMT $1; done; }
 alias git-pushall=git-pushall
 
 
+##########################
+#   phonegap & weinre    #
+##########################
+
 alias gap.prep='nginx.unload; weinre &'
 alias gap.debug='open -a "Google Chrome" "http://localhost:8080/client/#anonymous" --args --disable-web-security'
+
 
 alias launched='launchctl list |grep homebrew; echo REMOVE WITH: launchctl remove ...;'
 
