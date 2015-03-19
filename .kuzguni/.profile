@@ -93,7 +93,7 @@ alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resour
 
 alias s.ed="lime ~/worx/OSX-setup/.kuzguni/.profile"
 alias s.cmp="cp -Rf ~/worx/OSX-setup/.kuzguni/.profile ~/.profile; source ~/.profile"
-alias s.git="cd ~/worx/OSX-setup/; git add .; git commit -a -m '...'; git push -u origin master"
+alias s.git="var=$(pwd); cd ~/worx/OSX-setup/; git add .; git commit -a -m '...'; git push -u origin master; cd $var;"
 alias p.cd="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/codelab"
 
 alias wp.grab='cd /tmp; curl -O https://wordpress.org/latest.zip; unzip -q latest.zip; echo move to where?; read WHERE;'
