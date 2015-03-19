@@ -93,6 +93,7 @@ alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resour
 
 alias s.ed="lime ~/worx/OSX-setup/.kuzguni/.profile"
 alias s.cmp="cp -Rf ~/worx/OSX-setup/.kuzguni/.profile ~/.profile; source ~/.profile"
+alias s.git="cd ~/worx/OSX-setup/; git add .; git commit -a -m '...'; git push -u origin master"
 alias p.cd="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/codelab"
 
 alias wp.grab='cd /tmp; curl -O https://wordpress.org/latest.zip; unzip -q latest.zip; echo move to where?; read WHERE;'
@@ -126,6 +127,14 @@ alias nginx.unload='sudo launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.n
 alias focus.cd='cd ~/work/prod/js/Bilgera/focus.webapp'
 alias focus.compile='focus.cd; grunt compileToJst'
 alias focus.cmp='focus.cd; grunt compileToJst'
+alias hocaara.cd='cd ~/worx/misc_patches/hocaara/wp-content/themes/classipress'
+
+##########################
+#   heroku stuff         #
+##########################
+alias hgit.clone="heroku git:clone -a $@"
+alias hgit.remote="heroku git:remote -a $@"
+alias hgit.push="git push heroku master"
 
 ##########################
 #   git for many remotes #
