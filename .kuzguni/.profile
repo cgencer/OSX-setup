@@ -91,10 +91,9 @@ alias ports.tcp='sudo lsof -nP | grep TCP'
 alias ports.udp='sudo lsof -nP | grep UDP'
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
-alias s.ed="lime ~/.kuzguni/.profile"
-alias s.cp='cp -Rf .kuzguni/.profile ~/.profile'
-alias s.cmp="source ~/.profile"
-alias s.push='cp -Rf ~/.profile ~/worx/OSX-setup/.kuzguni/.profile;'
+alias s.ed="lime ~/worx/OSX-setup/.kuzguni/.profile"
+alias s.cmp="cp -Rf ~/worx/OSX-setup/.kuzguni/.profile ~/.profile; source ~/.profile"
+alias p.cd="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/codelab"
 
 alias wp.grab='cd /tmp; curl -O https://wordpress.org/latest.zip; unzip -q latest.zip; echo move to where?; read WHERE;'
 alias wp.help='echo wp.genesis ... info on WP-Genesis framework snippets'
