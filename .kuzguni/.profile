@@ -111,6 +111,10 @@ alias apache.cd="cd /private/etc/apache2/"
 alias apache.conf="sudo lime /private/etc/apache2/httpd.conf"
 alias apache.sites="sudo lime /private/etc/apache2/vhosts/"
 alias apache.restart='sudo apachectl restart'
+alias apache.test='apachectl -t'
+
+alias apache.cd="/usr/local/etc/apache2/2.4/httpd.conf"
+alias apache.conf="sudo lime /usr/local/etc/apache2/2.4/httpd.conf"
 
 alias nginx.cd="cd /usr/local/etc/nginx/"
 alias nginx.conf="sudo lime /usr/local/etc/nginx/nginx.conf"
@@ -127,7 +131,7 @@ alias nginx.unload='sudo launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.n
 alias focus.cd='cd ~/work/prod/js/Bilgera/focus.webapp'
 alias focus.compile='focus.cd; grunt compileToJst'
 alias focus.cmp='focus.cd; grunt compileToJst'
-alias hocaara.cd='cd ~/worx/misc_patches/hocaara/wp-content/themes/classipress'
+alias hocaara.cd='cd ~/worx/misc_patches/hocaara/wp-content/themes/hocaara'
 
 ##########################
 #   heroku stuff         #
@@ -143,6 +147,20 @@ git-pullall () { for RMT in $(git remote); do git pull -v $RMT $1; done; }
 alias git-pullall=git-pullall
 git-pushall () { for RMT in $(git remote); do git push -v $RMT $1; done; }
 alias git-pushall=git-pushall
+alias gp="git push -u origin master"
+
+
+##########################
+#   grunt stuff          #
+##########################
+alias git-init-install="git clone https://github.com/gruntjs/grunt-init-gruntfile.git ~/.grunt-init/gruntfile; 
+git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquery;
+git clone https://github.com/fooplugins/grunt-wp-boilerplate.git ~/.grunt-init/wp-boilerplate;
+git clone https://github.com/kamiyam/grunt-init-express ~/.grunt-init/express;
+git clone https://github.com/WeRelax/grunt-init-cordova.git ~/.grunt-init/cordova;
+git clone https://github.com/WeRelax/grunt-init-marionette.git ~/.grunt-init/marionette;
+git clone git@github.com:substancedev/grunt-wp-theme.git ~/.grunt-init/wp-theme;
+git clone https://github.com/gruntjs/grunt-init-node.git ~/.grunt-init/node"
 
 
 ##########################
