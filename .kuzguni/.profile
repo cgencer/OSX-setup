@@ -146,7 +146,7 @@ alias hgit.push="git push heroku master"
 git-pullall () { for RMT in $(git remote); do git pull -v $RMT $1; done; }    
 alias git-pullall=git-pullall
 git-pushall () { for RMT in $(git remote); do git push -v $RMT $1; done; }
-alias git-pushall=git-pushall
+alias gpa=git-pushall
 alias gp="git push -u origin master"
 
 
