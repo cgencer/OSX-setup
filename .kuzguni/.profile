@@ -252,6 +252,7 @@ export PATH=/usr/local:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:${HOME}/Applications
 export PATH=$PATH:/Developer/usr/bin/git
 export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:${HOME}/.composer/vendor/bin/
 export PATH=$PATH:${NPM_PACKAGES}/bin
 export PATH=$PATH:/usr/local/mongodb/bin
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
