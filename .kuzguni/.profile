@@ -148,7 +148,7 @@ alias git-pullall=git-pullall
 git-pushall () { for RMT in $(git remote); do git push -v $RMT $1; done; }
 alias gpa=git-pushall
 alias gp="git push -u origin master"
-
+alias gsub='git submodule update --init'
 
 ##########################
 #   grunt stuff          #
