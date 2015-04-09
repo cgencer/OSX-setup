@@ -106,6 +106,8 @@ alias wp.genesis='open http://justintallant.com/genesis-sublime-text-2-snippets/
 
 alias mongo.start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
 alias mongo.stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist'
+alias redis.start='sudo launchctl start io.redis.redis-server'
+alias redis.stop='sudo launchctl stop io.redis.redis-server'
 
 alias apache.cd="cd /private/etc/apache2/"
 alias apache.conf="sudo lime /private/etc/apache2/httpd.conf"
@@ -150,6 +152,7 @@ alias gpa=git-pushall
 alias gp="git push -u origin master"
 alias gsub='git submodule update --init'
 alias gsa="git submodule update --init --recursive"
+alias gc="git commit -am '...' --allow-empty"
 
 ##########################
 #   grunt stuff          #
