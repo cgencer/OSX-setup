@@ -1,3 +1,12 @@
 [submodule ".kuzguni/config.apache"]
 	path = .kuzguni/config.apache
 	url = https://github.com/h5bp/server-configs-apache
+[submodule ".kuzguni/config.lighttpd"]
+	path = .kuzguni/config.lighttpd
+	url = https://github.com/h5bp/server-configs-lighttpd.git
+[submodule ".kuzguni/config.nginx"]
+	path = .kuzguni/config.nginx
+	url = https://github.com/h5bp/server-configs-nginx.git
+[submodule ".kuzguni/build.ant"]
+	path = .kuzguni/build.ant
+	url = https://github.com/h5bp/ant-build-script.git
