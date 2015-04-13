@@ -1,0 +1,3 @@
+[submodule ".kuzguni/config.apache"]
+	path = .kuzguni/config.apache
+	url = https://github.com/h5bp/server-configs-apache
