@@ -151,7 +151,7 @@ git-pushall () { for RMT in $(git remote); do git push -v $RMT $1; done; }
 alias gpa=git-pushall
 alias gp="git push -u origin master"
 alias gsub='git submodule update --init'
-alias gsa="git submodule update --init --recursive"
+alias gsa="git submodule foreach --recursive git submodule update --init"
 alias gc="git commit -am '...' --allow-empty"
 
 ##########################
@@ -268,3 +268,7 @@ export PATH=$PATH:${NODE_MPATH}
 export PATH=$PATH:${HOME}/.node/bin
 export PATH=$PATH:/usr/local/Library/Formula/
 export PATH=$PATH:${ANDROID_SDK_PATH}/tools/:$ANDROID_SDK_PATH/platform-tools/
+export RBENV_ROOT="$(brew --prefix rbenv)"
+export GEM_HOME="$(brew --prefix)/opt/gems"
+export GEM_PATH="$(brew --prefix)/opt/gems"
+
