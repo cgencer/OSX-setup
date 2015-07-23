@@ -134,6 +134,7 @@ alias focus.cd='cd ~/work/prod/js/Bilgera/focus.webapp'
 alias focus.compile='focus.cd; grunt compileToJst'
 alias focus.cmp='focus.cd; grunt compileToJst'
 alias hocaara.cd='cd ~/worx/misc_patches/hocaara/wp-content/themes/hocaara'
+alias hg.boot='apache.restart;cd ~/worx/bsb*'
 
 ##########################
 #   heroku stuff         #
@@ -150,8 +151,7 @@ alias git-pullall=git-pullall
 git-pushall () { for RMT in $(git remote); do git push -v $RMT $1; done; }
 alias gpa=git-pushall
 alias gp="git push -u origin master"
-alias gsub='git submodule update --init'
-alias gsa="git submodule foreach --recursive git submodule update --init"
+alias gup='git submodule update --init --recursive; git submodule foreach --recursive git submodule update --init; bower update;'
 alias gc="git commit -am '...' --allow-empty"
 
 ##########################
